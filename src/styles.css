@@ -6,4 +6,39 @@
 
 body {
   background-color: var(--mainBlue);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* main styles */
+main {
+  width: 100%;
+  max-height: 80%;
+  padding: 0;
+}
+
+/*exhibit styles*/
+.exhibits {
+  color: var(--mainWhite);
+  background-color: var(--mainBlack);
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.container {
+  display: grid;
+  gap: 1rem 5rem;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
+}
+
+.exhibit {
+  color: var(--mainWhite);
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  border: 2px black solid;
+}
+
+.img {
+  background-color: var(--mainWhite);
 }
