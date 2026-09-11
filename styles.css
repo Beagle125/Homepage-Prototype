@@ -71,6 +71,17 @@ header::after {
   transform: skewY(1.5deg);
 }
 
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 2rem;
+}
+
+.icons > a > img {
+  scale: 1.5;
+}
+
 /*exhibit styles*/
 .exhibits {
   color: var(--mainWhite);
@@ -109,6 +120,13 @@ header::after {
     flex-wrap: wrap;
     text-align: center;
   }
+
+  .icons {
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 2rem;
+  }
+
   .exhibits > h2 {
     text-align: center;
   }
