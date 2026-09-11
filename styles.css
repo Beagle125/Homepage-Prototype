@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 :root {
   --mainBlue: #88c9d6;
+  --darkerBlue: #72aab5;
   --mainBlack: #282d2f;
-  --mainWhite: #caf0f8;
+  --mainWhite: #fbfcfc;
+  --textFont: "Space Mono";
+  --headerSize: 1rem;
+  --bodySize: 0.8rem;
 }
 
 body {
@@ -9,6 +15,11 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+/*paragraph body styles*/
+p {
+  font-size: var(--bodySize);
 }
 
 /* main styles */
@@ -22,9 +33,34 @@ main {
 header {
   margin-bottom: 4rem;
   position: relative;
+  font-family: var(--textFont);
+  font-weight: 100;
+  color: var(--mainWhite);
+  letter-spacing: 0.2rem;
+  font-size: var(--headerSize);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkerBlue);
+}
+
+.logo {
+  scale: 0.5;
+  margin-top: 2rem;
 }
 
 header::before {
+  content: "";
+  background-color: var(--mainBlue);
+  min-height: 100px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -20px;
+  transform: skewY(1.5deg);
+}
+
+header::after {
   content: "";
   background-color: var(--mainBlue);
   min-height: 70px;
@@ -44,6 +80,7 @@ header::before {
 
 .exhibits > h2 {
   text-align: start;
+  font-family: var(--textFont);
 }
 
 .container {
@@ -52,6 +89,7 @@ header::before {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
   width: 100%;
+  font-family: var(--textFont);
 }
 
 .exhibit {
@@ -67,6 +105,10 @@ header::before {
 
 /*media querry for mobile*/
 @media (max-width: 425px) {
+  header {
+    flex-wrap: wrap;
+    text-align: center;
+  }
   .exhibits > h2 {
     text-align: center;
   }
