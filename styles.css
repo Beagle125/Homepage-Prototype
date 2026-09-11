@@ -20,7 +20,19 @@ main {
 
 /*header styles*/
 header {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  background-color: var(--mainBlue);
+  min-height: 70px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -6rem;
+  transform: skew(-2deg, 1.5deg);
 }
 
 /*exhibit styles*/
@@ -28,21 +40,6 @@ header {
   color: var(--mainWhite);
   background-color: var(--mainBlack);
   padding: 1rem 1rem 1rem 1rem;
-  position: relative;
-}
-
-/*TODO
-probably add some margin between the two sections
-*/
-.exhibits::before {
-  content: "";
-  background-color: var(--mainBlue);
-  min-height: 50px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: -25px;
-  transform: skewY(2deg);
 }
 
 .exhibits > h2 {
