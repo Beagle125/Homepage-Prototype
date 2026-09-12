@@ -119,8 +119,8 @@ header::after {
 
 .exhibit {
   color: var(--mainWhite);
-  display: grid;
-  grid-template-rows: 1.5fr 1fr;
+  display: flex;
+  flex-direction: column;
 }
 
 .img {
