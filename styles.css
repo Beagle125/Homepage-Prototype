@@ -97,6 +97,7 @@ header::after {
   color: var(--mainWhite);
   background-color: var(--mainBlack);
   padding: 1rem 1rem 1rem 1rem;
+  padding-bottom: 4rem;
 }
 
 .exhibits > h2 {
@@ -161,7 +162,8 @@ header::after {
 /*footer styles*/
 footer {
   display: flex;
-  padding: 0 1rem 0 1rem;
+  padding: 2rem 0 0 0;
+  justify-content: space-evenly;
 }
 
 .footerInformation {
@@ -173,6 +175,17 @@ footer {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.footerImgContainer {
+  max-height: 500px;
+  max-width: 500px;
+}
+
+.footerImgContainer > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 /*media querry for mobile*/
@@ -190,5 +203,18 @@ footer {
 
   .exhibits > h2 {
     text-align: center;
+  }
+
+  .footerInformation {
+    text-align: center;
+  }
+
+  .contact {
+    justify-content: center;
+  }
+
+  footer {
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
