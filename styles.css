@@ -4,6 +4,7 @@
   --mainBlue: #88c9d6;
   --darkerBlue: #72aab5;
   --mainBlack: #282d2f;
+  --lightBlack: #343a3d;
   --mainWhite: #fbfcfc;
   --textFont: "Space Mono";
   --headerSize: 1rem;
@@ -107,14 +108,37 @@ header::after {
   color: var(--mainWhite);
   display: grid;
   grid-template-rows: 1.5fr 1fr;
-  border: 2px black solid;
-  border-radius: 10px;
 }
 
 .img {
-  background-color: var(--mainWhite);
+  max-height: 230px;
 }
 
+.img > img {
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.description {
+  background-color: var(--lightBlack);
+  border-radius: 0 0 10px 10px;
+}
+
+.exhibitHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.exhibitHeader > h3 {
+  flex: 0.9;
+}
+
+.exhibitHeader > a > img {
+  scale: 1.5;
+}
 /*media querry for mobile*/
 @media (max-width: 425px) {
   header {
