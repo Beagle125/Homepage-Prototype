@@ -34,7 +34,7 @@ main {
 header {
   margin-bottom: 4rem;
   position: relative;
-  font-family: var(--textFont);
+  font-family: var(--textFont), sans-serif;
   font-weight: 100;
   color: var(--mainWhite);
   letter-spacing: 0.2rem;
@@ -53,7 +53,7 @@ header {
 header::before {
   content: "";
   background-color: var(--mainBlue);
-  min-height: 100px;
+  min-height: 60px;
   width: 100%;
   position: absolute;
   left: 0;
@@ -83,6 +83,15 @@ header::after {
   scale: 1.5;
 }
 
+.icons > a {
+  transition: transform 1s ease;
+}
+
+.icons > a:focus,
+.icons > a:hover {
+  transform: scale(1.5);
+}
+
 /*exhibit styles*/
 .exhibits {
   color: var(--mainWhite);
@@ -92,7 +101,7 @@ header::after {
 
 .exhibits > h2 {
   text-align: start;
-  font-family: var(--textFont);
+  font-family: var(--textFont), sans-serif;
 }
 
 .container {
@@ -101,7 +110,7 @@ header::after {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
   width: 100%;
-  font-family: var(--textFont);
+  font-family: var(--textFont), sans-serif;
 }
 
 .exhibit {
@@ -139,6 +148,33 @@ header::after {
 .exhibitHeader > a > img {
   scale: 1.5;
 }
+
+.exhibitHeader > a {
+  transition: transform 1s ease;
+}
+
+.exhibitHeader > a:focus,
+.exhibitHeader > a:hover {
+  transform: scale(1.5);
+}
+
+/*footer styles*/
+footer {
+  display: flex;
+  padding: 0 1rem 0 1rem;
+}
+
+.footerInformation {
+  color: var(--mainWhite);
+  font-family: var(--textFont), sans-serif;
+}
+
+.contact {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 /*media querry for mobile*/
 @media (max-width: 425px) {
   header {
